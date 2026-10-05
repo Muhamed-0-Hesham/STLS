@@ -19,15 +19,10 @@ int main()
             cout<<"No";
             return 0;
             }
-
         }
-        
     }
     if(s.empty())
     cout<<"Yes";
     else
     cout<<"No";
-   
-
-
 }

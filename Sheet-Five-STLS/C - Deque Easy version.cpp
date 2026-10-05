@@ -1,39 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int q;
+int main()
+{
+    int q,x,i=0;
+    string s;
+    deque<int> b;
     cin >> q;
-
-    deque<int> dq;
-    while (q--) {
-        string cmd;
-        cin >> cmd;
-
-        if (cmd == "push_back") {
-            int x;
-            cin >> x;
-            dq.push_back(x);
-        } else if (cmd == "push_front") {
-            int x;
-            cin >> x;
-            dq.push_front(x);
-        } else if (cmd == "pop_front") {
-            dq.pop_front();
-        } else if (cmd == "pop_back") {
-            dq.pop_back();
-        } else if (cmd == "front") {
-            cout << dq.front() << "\n";
-        } else if (cmd == "back") {
-            cout << dq.back() << "\n";
-        } else if (cmd == "print") {
-            int x;
-            cin >> x;
-            cout << dq[x - 1] << "\n";  // 1-indexed in the problem
-        }
+   while (q--)
+   {
+    cin>>s;
+    if(s=="push_back")
+    {
+        cin>>x;
+        b.push_back(x);
+    }else if(s=="push_front")
+    {
+        cin>>x;
+        b.push_front(x);    
     }
-    return 0;
+     else if(s=="pop_front")
+        b.pop_front();    
+    
+    else if(s=="pop_back")
+        b.pop_back();
+    else if(s=="front")
+         cout << b.front() <<'\n';
+    else if(s=="back")
+         cout << b.back() <<'\n';
+    else if(s=="print")
+    {
+        cin>>x;
+        cout << b[x-1] <<'\n';
+    }         
+   }
 }
